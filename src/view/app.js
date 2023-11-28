@@ -43,5 +43,4 @@ app.use(
   swaggerUi.setup(specs, { explorer: true }),
 );
 app.use("/api", rootRoute)
-// app.use('/', rootRoute);
 

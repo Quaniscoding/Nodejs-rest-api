@@ -4,10 +4,10 @@ module.exports = {
             "ThongTinNguoiDung": {
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
+                    // "id": {
+                    //     "type": "integer",
+                    //     "format": "int32"
+                    // },
                     "name": {
                         "type": "string",
                     },
