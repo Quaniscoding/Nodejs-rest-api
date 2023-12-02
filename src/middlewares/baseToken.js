@@ -11,7 +11,7 @@ const checkToken = (token) => {
         if (checkT) {
             return { checkData: true, message: "" };
         } else {
-            return { checkData: false, message: "Token không hợp lệ !" };
+            return { checkData: false, message: "Invalid token !" };
 
         }
     } catch (error) {
@@ -26,7 +26,7 @@ const verifyToken = (req, res, next) => {
     } else {
         res.status(401).send({
             "status": 401,
-            "Content": "Token đã hết hạn",
+            "Content": "Token has expired !",
             "DateTime": date
         });
     }

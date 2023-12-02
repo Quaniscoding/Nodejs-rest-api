@@ -1,14 +1,14 @@
 const User = require('../../Models/User.model');
-const { sucessCodeLogin, failCode } = require('../../config/reponse');
+const { successCodeLogin, failCode } = require('../../config/reponse');
 const bcrypt = require('bcrypt');
 const signIn = async (req, res) => {
     try {
         const { email, pass_word } = req.body;
-        const user = await User.findOne({ email: email });
+        const user = await User.findOne({ email: email }, { __v: 0, _id: 0 });
         if (user) {
             const checkPass = bcrypt.compareSync(pass_word, user.pass_word);
             if (checkPass) {
-                sucessCodeLogin(res, user, "Login success!")
+                successCodeLogin(res, user, "Login success!")
             }
             else {
                 failCode(res, "", "Password doesn't match");
