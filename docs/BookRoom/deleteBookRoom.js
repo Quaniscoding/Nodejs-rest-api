@@ -2,7 +2,7 @@ module.exports = {
     "/api/deleteBookRoom/{id}": {
         delete: {
             tags: ["Đặt phòng"],
-            "operationId": "deleteDatPhong",
+            "operationId": "deleteBookRoom",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",

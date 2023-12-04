@@ -2,7 +2,7 @@ module.exports = {
     "/api/getComment": {
         get: {
             tags: ["Bình Luận"],
-            "operationId": "getBinhLuan",
+            "operationId": "getComment",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",

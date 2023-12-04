@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/get-nguoi-dung-id/{id}": {
+    "/api/getUser/getUserByPagination?{pageIndex}?{pageSize}": {
         get: {
             tags: ["Người dùng"],
-            "operationId": "getNguoiDungId",
+            "operationId": "getUserByPagination",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -11,11 +11,24 @@ module.exports = {
             ],
             "parameters": [
                 {
-                    "name": "id",
-                    "in": "path",
+                    "name": "pageIndex",
+                    "in": "query",
                     "required": true,
-                    "type": "string"
+                    "type": "integer",
+                    "format": "int32"
                 }, {
+                    "name": "pageSize",
+                    "in": "query",
+                    "required": true,
+                    "type": "integer",
+                    "format": "int32"
+                },
+                {
+                    "name": "keyword",
+                    "in": "header",
+                    "type": "string",
+                },
+                {
                     "name": "token",
                     "in": "header",
                     "description": "Nhập token",

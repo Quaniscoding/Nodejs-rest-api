@@ -2,7 +2,7 @@ module.exports = {
     "/api/updateComment/{id}": {
         put: {
             tags: ["Bình Luận"],
-            "operationId": "updateBinhLuan",
+            "operationId": "updateComment",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",

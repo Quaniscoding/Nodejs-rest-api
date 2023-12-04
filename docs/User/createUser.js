@@ -1,36 +1,29 @@
 module.exports = {
-    "/api/update-nguoi-dung/{id}": {
-        put: {
+    "/api/createUser": {
+        post: {
             tags: ["Người dùng"],
-            "operationId": "updateDatPhong",
+            "operationId": "createUser",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
                 "text/json",
                 "application/*+json"
             ],
-            "parameters": [
-                {
-                    "name": "id",
-                    "in": "path",
-                    "required": true,
-                    "type": "string"
-                }, {
-                    "name": "token",
-                    "in": "header",
-                    "description": "Nhập token",
-                    "required": true,
-                    "type": "string"
-                },
-
+            "parameters": [{
+                "name": "token",
+                "in": "header",
+                "description": "Nhập token",
+                "required": true,
+                "type": "string"
+            }
             ],
             "requestBody": {
-                "description": "Update người dùng",
+                "description": "Post người dùng",
                 "require": "true",
                 "content": {
                     " application/json": {
                         schema: {
-                            $ref: "#/components/schemas/CapNhatNguoiDung",
+                            $ref: "#/components/schemas/NguoiDungViewModel",
                         },
 
                     }

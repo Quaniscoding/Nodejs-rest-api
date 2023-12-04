@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/get-phong-thue/phan-trang/{pageIndex}/{pageSize}": {
+    "/api/getRoom/getRoomByPagination?{pageIndex}?{pageSize}": {
         get: {
             tags: ["Phòng"],
-            "operationId": "getPhongThuePhanTrang",
+            "operationId": "getRoomByPagination",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -12,13 +12,13 @@ module.exports = {
             "parameters": [
                 {
                     "name": "pageIndex",
-                    "in": "path",
+                    "in": "query",
                     "required": true,
                     "type": "integer",
                     "format": "int32"
                 }, {
                     "name": "pageSize",
-                    "in": "path",
+                    "in": "query",
                     "required": true,
                     "type": "integer",
                     "format": "int32"

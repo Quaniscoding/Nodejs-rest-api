@@ -17,9 +17,6 @@ module.exports = {
         },
         {
             name: "Vị trí"
-        },
-        {
-            name: "Ảnh phòng"
         }
     ],
 };

@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/post-nguoi-dung": {
+    "/api/createLocation": {
         post: {
-            tags: ["Người dùng"],
-            "operationId": "postNguoiDung",
+            tags: ["Vị trí"],
+            "operationId": "createLocation",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -18,12 +18,12 @@ module.exports = {
             }
             ],
             "requestBody": {
-                "description": "Post người dùng",
+                "description": "Post Phòng thue",
                 "require": "true",
                 "content": {
                     " application/json": {
                         schema: {
-                            $ref: "#/components/schemas/NguoiDungViewModel",
+                            $ref: "#/components/schemas/ViTriViewModel",
                         },
 
                     }

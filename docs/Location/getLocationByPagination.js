@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/getRoom/getLocationByPagination/{pageIndex}/{pageSize}": {
+    "/api/getLocation/getLocationByPagination?{pageIndex}?{pageSize}": {
         get: {
             tags: ["Vị trí"],
-            "operationId": "getViTriPhanTrang",
+            "operationId": "getLocation",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -12,20 +12,20 @@ module.exports = {
             "parameters": [
                 {
                     "name": "pageIndex",
-                    "in": "path",
+                    "in": "query",
                     "required": true,
                     "type": "integer",
                     "format": "int32"
                 }, {
                     "name": "pageSize",
-                    "in": "path",
+                    "in": "query",
                     "required": true,
                     "type": "integer",
                     "format": "int32"
                 },
                 {
-                    "name": "keyword",
-                    "in": "header",
+                    "name": "keyWord",
+                    "in": "query",
                     "type": "string",
                 },
                 {

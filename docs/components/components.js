@@ -4,32 +4,28 @@ module.exports = {
             "ThongTinNguoiDung": {
                 "type": "object",
                 "properties": {
-                    // "id": {
-                    //     "type": "integer",
-                    //     "format": "int32"
-                    // },
-                    "name": {
-                        "type": "string",
-                    },
                     "email": {
                         "type": "string",
                     },
                     "pass_word": {
                         "type": "string",
                     },
+                    "username": {
+                        "type": "string",
+                    },
+                    "birth_day": {
+                        "type": "string",
+                    },
                     "phone": {
                         "type": "integer",
                         "format": "int32"
                     },
-                    "birthday": {
-                        "type": "string",
-                    },
                     "gender": {
-                        "type": "boolean",
+                        "type": "string",
                     },
                     "role": {
                         "type": "string",
-                    },
+                    }
                 }
             },
             "DangNhapView": {
@@ -45,10 +41,6 @@ module.exports = {
             },
             "BinhLuanViewModel": {
                 "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
                     "ma_phong": {
                         "type": "integer",
                         "format": "int32"
@@ -71,21 +63,17 @@ module.exports = {
             },
             "DatPhongViewModel": {
                 "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
                     "ma_phong": {
                         "type": "integer",
                         "format": "int32"
                     },
                     "ngay_den": {
                         "type": "string",
-                        "format": "dateTime"
+                        "format": "string"
                     },
                     "ngay_di": {
                         "type": "string",
-                        "format": "dateTime"
+                        "format": "string"
                     },
                     "so_luong_khach": {
                         "type": "integer",
@@ -99,10 +87,6 @@ module.exports = {
             },
             "NguoiDungViewModel": {
                 "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
                     "name": {
                         "type": "string",
                     },
@@ -129,10 +113,6 @@ module.exports = {
             },
             "CapNhatNguoiDung": {
                 "properties": {
-                    "id": {
-                        "format": "int32",
-                        "type": "integer"
-                    },
                     "name": {
                         "type": "string"
                     },
@@ -155,10 +135,6 @@ module.exports = {
             },
             "PhongViewModel": {
                 "properties": {
-                    // "id": {
-                    //     "type": "integer",
-                    //     "format": "int32"
-                    // },
                     "ten_phong": {
                         "type": "string",
                     },
@@ -224,10 +200,6 @@ module.exports = {
             },
             "ViTriViewModel": {
                 "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
                     "ten_vi_tri": {
                         "type": "string"
                     },
@@ -239,21 +211,6 @@ module.exports = {
                     },
                     "hinh_anh": {
                         "type": "string"
-                    }
-                }
-            },
-            "AnhPhongModel": {
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
-                    "image": {
-                        "data": {
-                            "binary": "binary",
-                            "base64": "string",
-                            "subtype": "string"
-                        }
                     }
                 }
             },

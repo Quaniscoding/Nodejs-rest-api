@@ -1,10 +1,13 @@
 module.exports = {
-    "/postLocationImage/{id}": {
+    "/api/updateUser/{id}": {
         put: {
-            tags: ["Vị trí"],
-            "operationId": "postHinhViTri",
+            tags: ["Người dùng"],
+            "operationId": "updateUser",
             "consumes": [
-                "multipart/form-data",
+                "application/json-patch+json",
+                "application/json",
+                "text/json",
+                "application/*+json"
             ],
             "parameters": [
                 {
@@ -18,23 +21,20 @@ module.exports = {
                     "description": "Nhập token",
                     "required": true,
                     "type": "string"
-                }
+                },
+
             ],
             "requestBody": {
+                "description": "Update người dùng",
+                "require": "true",
                 "content": {
-                    "multipart/formData": {
-                        "schema": {
-                            "type": "object",
-                            "properties": {
-                                "formFile": {
-                                    "in": "formData",
-                                    "type": "file",
-                                    "format": "base64"
-                                }
-                            }
-                        }
+                    " application/json": {
+                        schema: {
+                            $ref: "#/components/schemas/CapNhatNguoiDung",
+                        },
+
                     }
-                }
+                },
             },
             "responses": {
                 "200": {

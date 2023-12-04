@@ -2,7 +2,7 @@ module.exports = {
     "/api/updateBookRoom/{id}": {
         put: {
             tags: ["Đặt phòng"],
-            "operationId": "updateDatPhong",
+            "operationId": "updateBookRoom",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",

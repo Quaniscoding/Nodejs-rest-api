@@ -1,6 +1,6 @@
 module.exports = {
     "/api/auth/signup": {
-        "post": {
+        post: {
             "tags": [
                 "Auth"
             ],
@@ -30,6 +30,4 @@ module.exports = {
             }
         }
     },
-
-
 };

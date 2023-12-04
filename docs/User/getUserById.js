@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/get-nguoi-dung/search/{TenNguoiDung}": {
+    "/api/getUserById/{id}": {
         get: {
             tags: ["Người dùng"],
-            "operationId": "getDatPhongId",
+            "operationId": "getUserById",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -11,7 +11,7 @@ module.exports = {
             ],
             "parameters": [
                 {
-                    "name": "TenNguoiDung",
+                    "name": "id",
                     "in": "path",
                     "required": true,
                     "type": "string"

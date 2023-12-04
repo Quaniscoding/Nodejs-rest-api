@@ -4,7 +4,6 @@ const Room = require('../../Models/Room.model')
 const createBookRoom = async (req, res) => {
     const { ma_phong, ngay_den, ngay_di, so_luong_khach, ma_nguoi_dat } = req.body;
     const dataRoom = await Room.findOne({ id: ma_phong });
-    console.log(dataRoom);
     if (!dataRoom) {
         failCode(res, "", "Room is not axist!")
     }

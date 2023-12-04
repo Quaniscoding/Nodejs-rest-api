@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/delete-nguoi-dung/{id}": {
+    "/api/deleteUser/{id}": {
         delete: {
             tags: ["Người dùng"],
-            "operationId": "deleteNguoiDung",
+            "operationId": "deleteUser",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",

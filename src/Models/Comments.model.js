@@ -9,6 +9,9 @@ const CommentSchema = new Schema({
         unique: true,
         min: 1
     },
+    ma_phong: {
+        type: Number
+    },
     ma_cong_viec: {
         type: String,
     },

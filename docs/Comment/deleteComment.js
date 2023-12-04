@@ -2,7 +2,7 @@ module.exports = {
     "/api/deleteComment/{id}": {
         delete: {
             tags: ["Bình Luận"],
-            "operationId": "deleteBinhLuan",
+            "operationId": "deleteComment",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",

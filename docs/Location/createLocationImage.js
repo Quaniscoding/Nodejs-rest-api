@@ -1,9 +1,9 @@
 module.exports = {
-    "/api/createRoomImage/{id}": {
+    "/api/createLocationImage/{id}": {
         put: {
-            tags: ["Phòng"],
-            operationId: "createRoomImage",
-            consumes: [
+            tags: ["Vị trí"],
+            "operationId": "createLocationImage",
+            "consumes": [
                 "multipart/form-data",
             ],
             parameters: [
@@ -43,5 +43,5 @@ module.exports = {
                 },
             },
         },
-    },
+    }
 };

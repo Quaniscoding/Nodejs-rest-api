@@ -2,7 +2,7 @@ module.exports = {
     "/api/getBookRoomById/{id}": {
         get: {
             tags: ["Đặt phòng"],
-            "operationId": "getDatPhongId",
+            "operationId": "getBookRoomById",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",

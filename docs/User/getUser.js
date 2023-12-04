@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/postBookRoom": {
-        post: {
-            tags: ["Đặt phòng"],
-            "operationId": "postDatPhong",
+    "/api/getUser": {
+        get: {
+            tags: ["Người dùng"],
+            "operationId": "getUser",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -17,18 +17,6 @@ module.exports = {
                 "type": "string"
             }
             ],
-            "requestBody": {
-                "description": "Post đặt phòng",
-                "require": "true",
-                "content": {
-                    " application/json": {
-                        schema: {
-                            $ref: "#/components/schemas/DatPhongViewModel",
-                        },
-
-                    }
-                },
-            },
             "responses": {
                 "200": {
                     "description": "Success"

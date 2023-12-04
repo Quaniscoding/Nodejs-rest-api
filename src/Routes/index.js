@@ -7,6 +7,7 @@ const getComment = require('./Comment/getComment')
 const postComment = require('./Comment/createComment');
 const deleteComment = require('./Comment/deleteComment');
 const updateComment = require('./Comment/updateComment');
+const getCommentByRoomId = require('./Comment/getCommentByRoomId');
 
 const getRoom = require('./Room/getRoom')
 const getRoomById = require('./Room/getRoomById')
@@ -15,7 +16,7 @@ const getRoomByPagination = require('./Room/getRoomByPagination')
 const createRoom = require('./Room/createRoom')
 const deleteRoom = require('./Room/deleteRoom');
 const updateRoom = require('./Room/updateRoom');
-const postImage = require('./Room/postImage');
+const createRoomImage = require('./Room/createRoomImage');
 
 const getUser = require('./User/getUser')
 const deleteUser = require('./User/deleteUser')
@@ -52,6 +53,7 @@ rootRoute.use('/', getComment)
 rootRoute.use('/', postComment)
 rootRoute.use('/', deleteComment)
 rootRoute.use('/', updateComment)
+rootRoute.use('/', getCommentByRoomId)
 
 //room
 rootRoute.use('/', getRoom)
@@ -61,7 +63,7 @@ rootRoute.use('/', getRoomByPagination)
 rootRoute.use('/', createRoom)
 rootRoute.use('/', deleteRoom)
 rootRoute.use('/', updateRoom)
-rootRoute.use('/', postImage)
+rootRoute.use('/', createRoomImage)
 
 //user
 rootRoute.use('/', getUser)

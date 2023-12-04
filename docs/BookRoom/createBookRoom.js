@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/postLocation": {
+    "/api/createBookRoom": {
         post: {
-            tags: ["Vị trí"],
-            "operationId": "postViTri",
+            tags: ["Đặt phòng"],
+            "operationId": "createBookRoom",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -18,12 +18,12 @@ module.exports = {
             }
             ],
             "requestBody": {
-                "description": "Post Phòng thue",
+                "description": "Post đặt phòng",
                 "require": "true",
                 "content": {
                     " application/json": {
                         schema: {
-                            $ref: "#/components/schemas/ViTriViewModel",
+                            $ref: "#/components/schemas/DatPhongViewModel",
                         },
 
                     }

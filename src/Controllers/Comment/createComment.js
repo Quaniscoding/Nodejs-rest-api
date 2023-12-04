@@ -24,6 +24,7 @@ const createComment = async (req, res) => {
                 successCode(res, "", "Comment success !")
             }
         } catch (error) {
+            console.log(error);
             errorCode(res, "Backend error")
         }
     }

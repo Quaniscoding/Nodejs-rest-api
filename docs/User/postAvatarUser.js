@@ -1,10 +1,11 @@
 module.exports = {
-    "/api/createRoomImage/{id}": {
+    "/api/postAvatarUser/{id}": {
         put: {
-            tags: ["Phòng"],
-            operationId: "createRoomImage",
-            consumes: [
+            tags: ["Người dùng"],
+            "operationId": "postAvatar",
+            "consumes": [
                 "multipart/form-data",
+                "image/png"
             ],
             parameters: [
                 {
@@ -43,5 +44,5 @@ module.exports = {
                 },
             },
         },
-    },
+    }
 };

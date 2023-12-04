@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/getBookRoomByUserId:{id}": {
+    "/api/getBookRoomByUserId/{id}": {
         get: {
             tags: ["Đặt phòng"],
-            "operationId": "getDatPhongTheoMaNguoiDung",
+            "operationId": "getBookRoomByUserId",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -11,7 +11,7 @@ module.exports = {
             ],
             "parameters": [
                 {
-                    "name": "MaNguoiDung",
+                    "name": "userId",
                     "in": "path",
                     "required": true,
                     "type": "string"

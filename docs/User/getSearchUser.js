@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/get-binh-luan-theo-ma-phong/{MaPhong}": {
+    "/api/searchUser": {
         get: {
-            tags: ["Bình Luận"],
-            "operationId": "getBinhLuanTheoMaPhong",
+            tags: ["Người dùng"],
+            "operationId": "searchUser",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -11,8 +11,8 @@ module.exports = {
             ],
             "parameters": [
                 {
-                    "name": "MaPhong",
-                    "in": "path",
+                    "name": "keyWord",
+                    "in": "query",
                     "required": true,
                     "type": "string"
                 }, {

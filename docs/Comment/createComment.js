@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/postComment": {
+    "/api/createComment": {
         post: {
             tags: ["Bình Luận"],
-            "operationId": "postBinhLuan",
+            "operationId": "createComment",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",

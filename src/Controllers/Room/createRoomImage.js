@@ -2,7 +2,7 @@ const { failCode, successCode, errorCode } = require('../../config/reponse');
 const DataImage = require('../../Models/Room.model');
 const fs = require('fs');
 
-const postImage = async (req, res) => {
+const createRoomImage = async (req, res) => {
     try {
         if (req.file.size >= 4000000) {
             fs.unlinkSync(`${process.cwd()}/public/img/${req.file.filename}`);
@@ -26,20 +26,19 @@ const postImage = async (req, res) => {
         let { hinh_anh } = req.body;
         hinh_anh = dataBase;
         const options = { new: true };
-        await DataImage.findOneAndUpdate(
+        const result = await DataImage.findOneAndUpdate(
             { id: id }, {
             hinh_anh: {
                 data: hinh_anh,
                 contentType: req.file.mimetype
             }
         }, options);
-        successCode(res, "", "Uploading image successfully!");
+        successCode(res, result, "Uploading image successfully!");
     } catch (error) {
-        console.log(error);
         errorCode(res, "Backend error!");
     }
 };
 
 module.exports = {
-    postImage
+    createRoomImage
 };

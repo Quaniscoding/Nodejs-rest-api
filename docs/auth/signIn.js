@@ -2,7 +2,7 @@ module.exports = {
     "/api/auth/signin": {
         post: {
             tags: ["Auth"],
-            "operationId": "DangNhap",
+            "operationId": "signin",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",

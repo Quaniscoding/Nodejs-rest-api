@@ -7,23 +7,17 @@ const getRoomByPagination = async (req, res) => {
             errorCodeNew(res, "The pageSize must be a positive number greater than zero.");
             return;
         }
-
         let query = {};
-
         if (keyWord) {
             query.ten_phong = keyWord;
         }
-
         let skip = 0;
-
         if (pageIndex) {
             skip = (Number(pageIndex) - 1) * Number(pageSize);
         }
-
         const result = await Room.find(query, { _id: 0 })
             .skip(skip)
             .limit(Number(pageSize));
-
         if (result.length === 0) {
             failCode(res, "Room empty!");
         } else {

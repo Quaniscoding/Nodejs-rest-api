@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/get-nguoi-dung/phan-trang/{pageIndex}/{pageSize}": {
+    "/api/getCommentByRoomId/{roomId}": {
         get: {
-            tags: ["Người dùng"],
-            "operationId": "getNguoiDungPhanTrang",
+            tags: ["Bình Luận"],
+            "operationId": "getCommentByRoomId",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
@@ -11,24 +11,11 @@ module.exports = {
             ],
             "parameters": [
                 {
-                    "name": "pageIndex",
+                    "name": "roomId",
                     "in": "path",
                     "required": true,
-                    "type": "integer",
-                    "format": "int32"
+                    "type": "string"
                 }, {
-                    "name": "pageSize",
-                    "in": "path",
-                    "required": true,
-                    "type": "integer",
-                    "format": "int32"
-                },
-                {
-                    "name": "keyword",
-                    "in": "header",
-                    "type": "string",
-                },
-                {
                     "name": "token",
                     "in": "header",
                     "description": "Nhập token",

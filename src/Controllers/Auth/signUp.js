@@ -24,7 +24,18 @@ const signUp = async (req, res) => {
                 }
             }
             );
-            successCode(res, "", "Create account success !");
+            successCode(res, {
+                username: username,
+                email: email,
+                phome: phone,
+                birth_day: birth_day,
+                gender: gender,
+                role: role,
+                avatar: {
+                    data: "",
+                    contentType: ""
+                }
+            }, "Create account success !");
         }
     } catch (error) {
         errorCode(res, "Backend error")
