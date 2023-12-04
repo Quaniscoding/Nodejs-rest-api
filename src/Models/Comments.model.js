@@ -19,7 +19,7 @@ const CommentSchema = new Schema({
         type: Number
     },
     ngay_binh_luan: {
-        type: Date,
+        type: String,
     },
     noi_dung: {
         type: String
