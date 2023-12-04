@@ -1,7 +1,7 @@
 {
-  "name": "restapi_youtube",
+  "name": "air-bnb-api",
   "version": "1.0.0",
-  "description": "Youtube Tutorial",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon src/view/app.js",

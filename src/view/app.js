@@ -19,6 +19,10 @@ const { tags } = require("../../docs/tags.js");
 const { components } = require('../../docs/components/components.js');
 const { "/api/auth/signin": signIn } = require("../../docs/auth/signIn");
 const { "/api/auth/signup": signUp } = require("../../docs/auth/signUp");
+const { "/api/getRoom": getRoom } = require('../../docs/Room/getRoom.js');
+const { "/api/createRoom": createRoom } = require('../../docs/Room/createRoom.js');
+const { "/api/postImage/{id}": postImage } = require("../../docs/Room/postImage.js")
+const { "/api/updateRoom/{id}": updateRoom } = require("../../docs/Room/updateRoom.js")
 const options = {
   definition: {
     openapi: "3.0.0",
@@ -32,6 +36,14 @@ const options = {
       //auth
       "/api/auth/signin": signIn,
       "/api/auth/signup": signUp,
+      //comment
+
+      //room
+      "/api/getRoom": getRoom,
+      "/api/createRoom": createRoom,
+      "/api/updateRoom/{id}": updateRoom,
+      "/api/postImage/{id}": postImage,
+      //image
     }
   },
   apis: ["../routes/index.js", "../controllers/Auth/*.js"],

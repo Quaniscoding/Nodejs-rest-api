@@ -13,11 +13,10 @@ const successCodeLogin = (res, data, message) => {
     res.status(200).json({
         "statusCode": 200,
         message,
-        content: {
-            "User": [{ "id": data.id }, { "email": data.email }, { "birth_day": data.birth_day }, { "gender": data.gender }, { "role": data.role }],
-            "Token": parseToken(data),
-            DateTime: date
-        }
+        content: data,
+        "Token": parseToken(data),
+        DateTime: date
+
     });
 }
 //400

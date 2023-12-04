@@ -58,7 +58,8 @@ const RoomSchema = new Schema({
         type: Boolean,
     },
     hinh_anh: {
-        type: String,
+        data: String,
+        contentType: String
     },
     ma_vi_tri: {
         type: String,

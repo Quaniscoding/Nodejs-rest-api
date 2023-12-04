@@ -1,14 +1,14 @@
-const Room = require('../../Models/Room.model');
+const Data = require('../../Models/Room.model');
 const { successCode, failCode } = require('../../config/reponse');
 
 const getRoom = async (req, res) => {
     try {
-        const dataComment = await Room.find({}, { _id: 0, __v: 0 });
-        if (dataComment == "") {
+        const result = await Data.find({}, { _id: 0, __v: 0 });
+        if (result == "") {
             failCode(res, "", "List Room is emty !")
         }
         else {
-            successCode(res, dataComment, "Get list comment success!")
+            successCode(res, result, "Get room success!")
         }
 
     } catch (error) {

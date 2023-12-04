@@ -155,10 +155,10 @@ module.exports = {
             },
             "PhongViewModel": {
                 "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int32"
-                    },
+                    // "id": {
+                    //     "type": "integer",
+                    //     "format": "int32"
+                    // },
                     "ten_phong": {
                         "type": "string",
                     },
@@ -239,6 +239,21 @@ module.exports = {
                     },
                     "hinh_anh": {
                         "type": "string"
+                    }
+                }
+            },
+            "AnhPhongModel": {
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "image": {
+                        "data": {
+                            "binary": "binary",
+                            "base64": "string",
+                            "subtype": "string"
+                        }
                     }
                 }
             },

@@ -18,9 +18,13 @@ const signUp = async (req, res) => {
                 birth_day: birth_day,
                 gender: gender,
                 role: role,
+                avatar: {
+                    "data": "",
+                    "contentType": ""
+                }
             }
             );
-            successCode(res, "", "Create acount success !");
+            successCode(res, "", "Create account success !");
         }
     } catch (error) {
         errorCode(res, "Backend error")

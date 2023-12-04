@@ -12,10 +12,12 @@ const UserSchema = new Schema({
         type: String,
     },
     email: {
-        type: String, require: true
+        type: String,
+        require: true
     },
     pass_word: {
-        type: String, require: true
+        type: String,
+        require: true,
     },
     phone: {
         type: Number,
@@ -30,7 +32,8 @@ const UserSchema = new Schema({
         type: String,
     },
     avatar: {
-        type: String,
+        data: String,
+        contentType: String
     },
 }, {
     versionKey: false // Disable the "__v" field
