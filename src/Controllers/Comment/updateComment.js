@@ -11,7 +11,9 @@ const updateComment = async (req, res) => {
             failCode(res, "", "Comment does not exist !");
         }
         else {
-            successCode(res, update, "Update comments success !")
+            successCode(res, {
+                ma_phong: ma_phong, ma_nguoi_binh_luan: ma_nguoi_binh_luan, ngay_binh_luan: ngay_binh_luan, noi_dung: noi_dung, sao_binh_luan: sao_binh_luan
+            }, "Update comments success !")
         }
     } catch (error) {
         console.log(error);

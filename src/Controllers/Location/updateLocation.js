@@ -20,7 +20,9 @@ const updateLocation = async (req, res) => {
             failCode(res, "", "Location does not exist !");
         }
         else {
-            successCode(res, update, "Update location success !")
+            successCode(res, {
+                ten_vi_tri: ten_vi_tri, tinh_thanh: tinh_thanh, quoc_gia: quoc_gia, hinh_anh: hinh_anh
+            }, "Update location success !")
         }
     } catch (error) {
         failCode(res, "Backend error !")

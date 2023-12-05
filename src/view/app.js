@@ -10,9 +10,7 @@ app.use(express.json());
 app.use(express.static("."));
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log('Server started on port ' + PORT + '...');
-});
+app.listen(PORT);
 require('../config/initDB')();
 const rootRoute = require('../Routes');
 const { tags } = require("../../docs/tags.js");

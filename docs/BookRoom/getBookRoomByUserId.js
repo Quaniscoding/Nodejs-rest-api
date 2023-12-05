@@ -11,7 +11,7 @@ module.exports = {
             ],
             "parameters": [
                 {
-                    "name": "userId",
+                    "name": "id",
                     "in": "path",
                     "required": true,
                     "type": "string"

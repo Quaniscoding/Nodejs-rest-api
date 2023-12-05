@@ -17,8 +17,7 @@ module.exports = {
                         "type": "string",
                     },
                     "phone": {
-                        "type": "integer",
-                        "format": "int32"
+                        "type": "string",
                     },
                     "gender": {
                         "type": "string",
@@ -87,7 +86,7 @@ module.exports = {
             },
             "NguoiDungViewModel": {
                 "properties": {
-                    "name": {
+                    "username": {
                         "type": "string",
                     },
                     "email": {
@@ -97,14 +96,13 @@ module.exports = {
                         "type": "string",
                     },
                     "phone": {
-                        "type": "integer",
-                        "format": "int32"
+                        "type": "string",
                     },
-                    "birthday": {
+                    "birth_day": {
                         "type": "string",
                     },
                     "gender": {
-                        "type": "boolean",
+                        "type": "string",
                     },
                     "role": {
                         "type": "string",
@@ -113,7 +111,7 @@ module.exports = {
             },
             "CapNhatNguoiDung": {
                 "properties": {
-                    "name": {
+                    "username": {
                         "type": "string"
                     },
                     "email": {
@@ -122,7 +120,7 @@ module.exports = {
                     "phone": {
                         "type": "string"
                     },
-                    "birthday": {
+                    "birth_day": {
                         "type": "string"
                     },
                     "gender": {
