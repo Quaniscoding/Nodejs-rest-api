@@ -43,7 +43,7 @@ const { "/api/updateUser/{id}": updateUser } = require("../../docs/User/updateUs
 //room
 const { "/api/getRoom": getRoom } = require('../../docs/Room/getRoom.js');
 const { "/api/createRoom": createRoom } = require('../../docs/Room/createRoom.js');
-const { "/api/postImage/{id}": postImage } = require("../../docs/Room/postImage.js")
+const { "/api/createRoomImage/{id}": createRoomImage } = require("../../docs/Room/postImage.js")
 const { "/api/updateRoom/{id}": updateRoom } = require("../../docs/Room/updateRoom.js")
 const { "/api/deleteRoom/{id}": deleteRoom } = require("../../docs/Room/deleteRoom.js")
 const { "/api/getRoomByLocation/{id}": getRoomByLocation } = require("../../docs/Room/getRoomByLocation.js")
@@ -75,42 +75,42 @@ const options = {
       "/api/auth/signup": signUp,
       //comment
       "/api/getComment": getComment,
-      "/api/createComment": createComment,
-      "/api/deleteComment/{id}": deleteComment,
       "/api/getCommentByRoomId/{roomId}": getCommentByRoomId,
+      "/api/createComment": createComment,
       "/api/updateComment/{id}": updateComment,
+      "/api/deleteComment/{id}": deleteComment,
       //bookRoom
       "/api/getBookRoom": getBookRoom,
-      "/api/createBookRoom": createBookRoom,
-      "/api/deleteBookRoom/{id}": deleteBookRoom,
-      "/api/updateBookRoom/{id}": updateBookRoom,
       "/api/getBookRoomByUserId/{id}": getBookRoomByUserId,
       "/api/getBookRoomById/{id}": getBookRoomById,
+      "/api/createBookRoom": createBookRoom,
+      "/api/updateBookRoom/{id}": updateBookRoom,
+      "/api/deleteBookRoom/{id}": deleteBookRoom,
       //room
       "/api/getRoom": getRoom,
-      "/api/createRoom": createRoom,
-      "/api/updateRoom/{id}": updateRoom,
-      "/api/postImage/{id}": postImage,
-      "/api/deleteRoom/{id}": deleteRoom,
       "/api/getRoomByLocation/{id}": getRoomByLocation,
       "/api/getRoom/getRoomByPagination?{pageIndex}?{pageSize}": getRoomByPagination,
       "/api/getRoomById/{id}": getRoomById,
+      "/api/createRoom": createRoom,
+      "/api/createRoomImage/{id}": createRoomImage,
+      "/api/deleteRoom/{id}": deleteRoom,
+      "/api/updateRoom/{id}": updateRoom,
       //user
       "/api/getUser": getUser,
       "/api/getUserById/{id}": getUserById,
       "/api/searchUser": getSearchUser,
       "/api/getUser/getUserByPagination?{pageIndex}?{pageSize}": getUserByPagination,
       "/api/createUser": createUser,
+      "/api/updateUser/{id}": updateUser,
       "/api/postAvatarUser/{id}": postAvatarUser,
       "/api/deleteUser/{id}": deleteUser,
-      "/api/updateUser/{id}": updateUser,
       //location
       "/api/getLocation": getLocation,
-      "/api/createLocation": createLocation,
       "/api/getLocation/getLocationByPagination?{pageIndex}?{pageSize}": getLocationByPagination,
       "/api/getLocationById/{id}": getLocationById,
-      "/api/updateLocation/{id}": updateLocation,
+      "/api/createLocation": createLocation,
       "/api/deleteLocation/{id}": deleteLocation,
+      "/api/updateLocation/{id}": updateLocation,
       "/api/createLocationImage/{id}": createLocationImage
     }
   },

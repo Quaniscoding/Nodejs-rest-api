@@ -1,8 +1,8 @@
 module.exports = {
-    "/api/getLocationById": {
+    "/api/getLocationById/{id}": {
         get: {
             tags: ["Vị trí"],
-            "operationId": "getViTri",
+            "operationId": "getLocationById",
             "consumes": [
                 "application/json-patch+json",
                 "application/json",
