@@ -46,7 +46,7 @@ const { "/api/createRoom": createRoom } = require('../../docs/Room/createRoom.js
 const { "/api/createRoomImage/{id}": createRoomImage } = require("../../docs/Room/postImage.js")
 const { "/api/updateRoom/{id}": updateRoom } = require("../../docs/Room/updateRoom.js")
 const { "/api/deleteRoom/{id}": deleteRoom } = require("../../docs/Room/deleteRoom.js")
-const { "/api/getRoomByLocation/{id}": getRoomByLocation } = require("../../docs/Room/getRoomByLocation.js")
+const { "/api/getRoom/getRoomByLocation/{id}": getRoomByLocation } = require("../../docs/Room/getRoomByLocation.js")
 const { "/api/getRoom/getRoomByPagination?{pageIndex}?{pageSize}": getRoomByPagination } = require("../../docs/Room/getRoomByPagination.js")
 const { "/api/getRoomById/{id}": getRoomById } = require("../../docs/Room/getRoomById.js")
 //location
@@ -88,7 +88,7 @@ const options = {
       "/api/deleteBookRoom/{id}": deleteBookRoom,
       //room
       "/api/getRoom": getRoom,
-      "/api/getRoomByLocation/{id}": getRoomByLocation,
+      "/api/getRoom/getRoomByLocation/{id}": getRoomByLocation,
       "/api/getRoom/getRoomByPagination?{pageIndex}?{pageSize}": getRoomByPagination,
       "/api/getRoomById/{id}": getRoomById,
       "/api/createRoom": createRoom,

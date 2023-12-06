@@ -1,5 +1,5 @@
 module.exports = {
-    "/api/getRoomByLocation/{id}": {
+    "/api/getRoom/getRoomByLocation/{id}": {
         get: {
             tags: ["Phòng"],
             "operationId": "getRoomByLocation",
