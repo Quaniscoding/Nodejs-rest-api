@@ -22,7 +22,7 @@ const { "/api/auth/signup": signUp } = require("../../docs/auth/signUp");
 const { "/api/getComment": getComment } = require("../../docs/Comment/getComment.js");
 const { "/api/createComment": createComment } = require("../../docs/Comment/createComment.js");
 const { "/api/deleteComment/{id}": deleteComment } = require("../../docs/Comment/deleteComment.js");
-const { "/api/getCommentByRoomId/{roomId}": getCommentByRoomId } = require("../../docs/Comment/getCommentByRoomId.js");
+const { "/api/getCommentByRoomId/{id}": getCommentByRoomId } = require("../../docs/Comment/getCommentByRoomId.js");
 const { "/api/updateComment/{id}": updateComment } = require("../../docs/Comment/updateComment.js");
 //bookRoom
 const { "/api/getBookRoom": getBookRoom } = require("../../docs/BookRoom/getBookRoom.js");
@@ -75,7 +75,7 @@ const options = {
       "/api/auth/signup": signUp,
       //comment
       "/api/getComment": getComment,
-      "/api/getCommentByRoomId/{roomId}": getCommentByRoomId,
+      "/api/getCommentByRoomId/{id}": getCommentByRoomId,
       "/api/createComment": createComment,
       "/api/updateComment/{id}": updateComment,
       "/api/deleteComment/{id}": deleteComment,

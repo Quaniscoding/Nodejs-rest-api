@@ -1,5 +1,5 @@
 module.exports = {
-    "/api/getCommentByRoomId/{roomId}": {
+    "/api/getCommentByRoomId/{id}": {
         get: {
             tags: ["Bình Luận"],
             "operationId": "getCommentByRoomId",
@@ -11,7 +11,7 @@ module.exports = {
             ],
             "parameters": [
                 {
-                    "name": "roomId",
+                    "name": "id",
                     "in": "path",
                     "required": true,
                     "type": "string"
