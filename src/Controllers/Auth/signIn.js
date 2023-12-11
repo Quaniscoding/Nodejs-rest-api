@@ -5,7 +5,6 @@ const signIn = async (req, res) => {
     try {
         const { email, pass_word } = req.body;
         const result = await User.findOne({ email: email }, { __v: 0, _id: 0 });
-        console.log(result);
         if (result) {
             const checkPass = bcrypt.compareSync(pass_word, result.pass_word);
             if (checkPass) {
@@ -15,9 +14,8 @@ const signIn = async (req, res) => {
                     "phone": result.phone,
                     "birth_day": result.birth_day,
                     "gender": result.gender,
-                    "role": result.role,
+                    "role": "user",
                     "id": result.id,
-                    "avatar": result.avatar.data
                 }, "Login success!")
             }
             else {
@@ -29,7 +27,6 @@ const signIn = async (req, res) => {
         }
     }
     catch (error) {
-        console.log(error);
         failCode(res, "Backend error !")
     }
 }

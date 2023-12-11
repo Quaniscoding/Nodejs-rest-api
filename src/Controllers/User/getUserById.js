@@ -16,7 +16,8 @@ const getUserById = async (req, res) => {
                 "birth_day": result.birth_day,
                 "gender": result.gender,
                 "role": result.role,
-                "id": result.id
+                "id": result.id,
+                "avatar": result.avatar.data
             }, "Get User success!")
         }
 

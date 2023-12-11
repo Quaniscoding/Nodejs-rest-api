@@ -21,7 +21,7 @@ const LocationModel = new Schema({
     hinh_anh: {
         data: String,
         contentType: String
-    },
+    }
 }, {
     versionKey: false // Disable the "__v" field
 });
