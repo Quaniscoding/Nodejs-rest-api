@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const parseToken = (data) => {
-    let token = jwt.sign({ data }, "bimat", { algorithm: "HS256", expiresIn: "2d" }); //hs256
+    let token = jwt.sign({ data }, "bimat", { algorithm: "HS256", expiresIn: "10d" }); //hs256
     return token;
 }
 const date = new Date();
