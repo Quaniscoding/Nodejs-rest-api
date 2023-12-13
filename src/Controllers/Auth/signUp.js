@@ -17,7 +17,7 @@ const signUp = async (req, res) => {
                 phone: phone,
                 birth_day: birth_day,
                 gender: gender,
-                role: role,
+                role: "user",
                 avatar: {
                     "data": "",
                     "contentType": ""

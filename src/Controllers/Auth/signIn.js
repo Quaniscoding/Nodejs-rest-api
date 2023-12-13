@@ -14,7 +14,7 @@ const signIn = async (req, res) => {
                     "phone": result.phone,
                     "birth_day": result.birth_day,
                     "gender": result.gender,
-                    "role": "user",
+                    "role": result.role,
                     "id": result.id,
                 }, "Login success!")
             }
