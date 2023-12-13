@@ -96,7 +96,8 @@ module.exports = {
                         "type": "string",
                     },
                     "phone": {
-                        "type": "string",
+                        "type": "integer",
+                        "format": "int32"
                     },
                     "birth_day": {
                         "type": "string",
@@ -109,7 +110,7 @@ module.exports = {
                     },
                 }
             },
-            "CapNhatNguoiDung": {
+            "updateUser": {
                 "properties": {
                     "username": {
                         "type": "string"
@@ -118,13 +119,14 @@ module.exports = {
                         "type": "string"
                     },
                     "phone": {
-                        "type": "string"
+                        "type": "integer",
+                        "format": "int32"
                     },
                     "birth_day": {
                         "type": "string"
                     },
                     "gender": {
-                        "type": "boolean"
+                        "type": "string"
                     },
                     "role": {
                         "type": "string"

@@ -5,10 +5,15 @@ const updateUser = async (req, res) => {
     try {
         const id = req.params.id;
         const options = { new: true };
-        const { username, email, phone, birthday, gender, role } = req.body;
-        const update = await User.findOneAndUpdate(id, { username, email, phone, birthday, gender, role }, options)
+        const { username, email, phone, birthday, gender, role, birth_day } = req.body;
+        const checkEmailExist = await User.findOne({ email: email })
+        if (checkEmailExist) {
+            failCode(res, "", "Email is exist !")
+        }
+        const update = await User.findOneAndUpdate(id, { username, email, phone, birthday, gender, role, birth_day }, options)
         if (!update) {
             failCode(res, "", "User does not exist !");
+            return;
         }
         else {
             successCode(res, {

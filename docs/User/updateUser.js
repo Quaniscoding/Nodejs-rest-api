@@ -14,7 +14,7 @@ module.exports = {
                     "name": "id",
                     "in": "path",
                     "required": true,
-                    "type": "string"
+                    "type": "number"
                 }, {
                     "name": "token",
                     "in": "header",
@@ -25,12 +25,12 @@ module.exports = {
 
             ],
             "requestBody": {
-                "description": "Update người dùng",
+                "description": "Update user",
                 "require": "true",
                 "content": {
                     " application/json": {
                         schema: {
-                            $ref: "#/components/schemas/CapNhatNguoiDung",
+                            $ref: "#/components/schemas/updateUser",
                         },
 
                     }
