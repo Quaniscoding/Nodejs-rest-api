@@ -26,13 +26,17 @@ const createRoomImage = async (req, res) => {
         let { hinh_anh } = req.body;
         hinh_anh = dataBase;
         const options = { new: true };
-        const result = await DataImage.findByIdAndUpdate(id, {
+        const dataUpload = await DataImage.findByIdAndUpdate(id, {
             hinh_anh: {
                 data: hinh_anh,
                 contentType: req.file.mimetype
             }
         }, options);
-        successCode(res, result, "Uploading image successfully!");
+        if (!dataUpload) {
+            failCode(res, "", "Room not found");
+            return;
+        }
+        successCode(res, "", "Uploading image successfully!");
     } catch (error) {
         errorCode(res, "Backend error!");
     }

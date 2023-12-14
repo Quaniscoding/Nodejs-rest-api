@@ -26,13 +26,17 @@ const postLocationImage = async (req, res) => {
         let { hinh_anh } = req.body;
         hinh_anh = dataBase;
         const options = { new: true };
-        await DataImage.findByIdAndUpdate(
+        const dataUpload = await DataImage.findByIdAndUpdate(
             id, {
             hinh_anh: {
                 data: hinh_anh,
                 contentType: req.file.mimetype
             }
         }, options);
+        if (!dataUpload) {
+            failCode(res, "", "Location not found");
+            return;
+        }
         successCode(res, "", "Uploading image successfully!");
     } catch (error) {
         console.log(error);

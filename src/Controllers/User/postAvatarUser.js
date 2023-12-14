@@ -26,13 +26,17 @@ const postAvatarUser = async (req, res) => {
         let { hinh_anh } = req.body;
         hinh_anh = dataBase;
         const options = { new: true };
-        await DataImage.findByIdAndUpdate(
+        const updatedUser = await DataImage.findByIdAndUpdate(
             id, {
             avatar: {
                 data: hinh_anh,
                 contentType: req.file.mimetype
             }
         }, options);
+        if (!updatedUser) {
+            failCode(res, "", "User not found");
+            return;
+        }
         successCode(res, "", "Uploading avatar successfully!");
     } catch (error) {
         errorCode(res, "Backend error!");
