@@ -3,11 +3,6 @@ const Schema = mongoose.Schema;
 const passportLocalMongoose = require('passport-local-mongoose');
 const autoIncrementModelID = require('./counterModel');
 const UserSchema = new Schema({
-    id: {
-        type: Number,
-        unique: true,
-        min: 1
-    },
     username: {
         type: String,
     },

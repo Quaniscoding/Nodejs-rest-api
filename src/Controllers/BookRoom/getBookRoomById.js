@@ -4,7 +4,8 @@ const { successCode, failCode } = require('../../config/reponse');
 const getBookRoomById = async (req, res) => {
     const id = req.params.id;
     try {
-        const result = await Data.findOne({ id: id });
+        const result = await Data.findOne({ _id: id });
+        console.log(result);
         if (!result) {
             failCode(res, "", "Book room does not exist !")
         }

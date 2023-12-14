@@ -4,7 +4,7 @@ const User = require('../../Models/User.model')
 
 const createComment = async (req, res) => {
     const { ma_phong, ma_nguoi_binh_luan, ngay_binh_luan, noi_dung, sao_binh_luan } = req.body;
-    const dataUser = await User.findOne({ id: ma_nguoi_binh_luan });
+    const dataUser = await User.findOne({ _id: ma_nguoi_binh_luan });
     if (!dataUser) {
         failCode(res, "", "User is not axist!")
     }
@@ -21,10 +21,9 @@ const createComment = async (req, res) => {
                 failCode(res, "", "Comment fail!")
             }
             else {
-                successCode(res, "", "Comment success !")
+                successCode(res, dataComment, "Comment success !")
             }
         } catch (error) {
-            console.log(error);
             errorCode(res, "Backend error")
         }
     }

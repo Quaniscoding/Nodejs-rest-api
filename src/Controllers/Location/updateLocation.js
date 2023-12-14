@@ -6,7 +6,7 @@ const updateLocation = async (req, res) => {
         const id = req.params.id;
         const options = { new: true };
         const { ten_vi_tri, tinh_thanh, quoc_gia, hinh_anh } = req.body;
-        const update = await Data.findOneAndUpdate({ id: id },
+        const update = await Data.findByIdAndUpdate(id,
             {
                 ten_vi_tri,
                 tinh_thanh,

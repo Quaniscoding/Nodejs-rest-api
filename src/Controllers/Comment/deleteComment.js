@@ -4,7 +4,7 @@ const { successCode, failCode } = require('../../config/reponse');
 const deleteComment = async (req, res) => {
     const id = req.params.id;
     try {
-        const dataComment = await Comment.findOneAndDelete({ id: id });
+        const dataComment = await Comment.findByIdAndDelete(id);
         if (!dataComment) {
             failCode(res, "", "Comment is not exist !")
         }

@@ -4,16 +4,11 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const autoIncrementModelID = require('./counterModel');
 
 const RoomSchema = new Schema({
-    id: {
-        type: Number,
-        unique: true,
-        min: 1
-    },
     ten_phong: {
         type: String,
     },
     khach: {
-        type: Number
+        type: String
     },
     phong_ngu: {
         type: Number

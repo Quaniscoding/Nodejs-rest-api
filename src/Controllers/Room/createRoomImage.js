@@ -26,8 +26,7 @@ const createRoomImage = async (req, res) => {
         let { hinh_anh } = req.body;
         hinh_anh = dataBase;
         const options = { new: true };
-        const result = await DataImage.findOneAndUpdate(
-            { id: id }, {
+        const result = await DataImage.findByIdAndUpdate(id, {
             hinh_anh: {
                 data: hinh_anh,
                 contentType: req.file.mimetype

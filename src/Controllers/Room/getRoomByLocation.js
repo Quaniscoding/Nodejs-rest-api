@@ -4,12 +4,12 @@ const { successCode, failCode } = require('../../config/reponse');
 const getRoomByLocation = async (req, res) => {
     const id = req.params.id;
     try {
-        const dataComment = await Room.find({ ma_vi_tri: id });
-        if (dataComment == "") {
+        const data = await Room.find({ ma_vi_tri: id });
+        if (data == "") {
             failCode(res, "", "Room does not exist !")
         }
         else {
-            successCode(res, dataComment, "Get room success!")
+            successCode(res, data, "Get room success!")
         }
 
     } catch (error) {

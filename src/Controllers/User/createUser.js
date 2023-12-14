@@ -10,7 +10,7 @@ const createUser = async (req, res) => {
             failCode(res, "", "Email is exist !")
         }
         else {
-            await User.create({
+            const data = await User.create({
                 username: username,
                 email: email,
                 pass_word: passWordHash,
@@ -24,7 +24,18 @@ const createUser = async (req, res) => {
                 }
             }
             );
-            successCode(res, "", "Create account success !");
+            successCode(res, {
+                "username": username,
+                "email": email,
+                "phone": phone,
+                "birth_day": birth_day,
+                "gender": gender,
+                "role": "user",
+                "avatar": {
+                    "data": "",
+                    "contentType": ""
+                }
+            }, "Create account success !");
         }
     } catch (error) {
         errorCode(res, "Backend error")

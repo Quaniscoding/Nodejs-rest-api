@@ -26,16 +26,15 @@ const postAvatarUser = async (req, res) => {
         let { hinh_anh } = req.body;
         hinh_anh = dataBase;
         const options = { new: true };
-        await DataImage.findOneAndUpdate(
-            { id: id }, {
+        await DataImage.findByIdAndUpdate(
+            id, {
             avatar: {
                 data: hinh_anh,
                 contentType: req.file.mimetype
             }
         }, options);
-        successCode(res, "", "Uploading image successfully!");
+        successCode(res, "", "Uploading avatar successfully!");
     } catch (error) {
-        console.log(error);
         errorCode(res, "Backend error!");
     }
 };

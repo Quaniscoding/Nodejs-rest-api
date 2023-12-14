@@ -4,11 +4,6 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const autoIncrementModelID = require('./counterModel');
 
 const LocationModel = new Schema({
-    id: {
-        type: Number,
-        unique: true,
-        min: 1
-    },
     ten_vi_tri: {
         type: String,
     },

@@ -3,7 +3,7 @@ const Room = require('../../Models/Room.model');
 const User = require('../../Models/User.model')
 const createRoom = async (req, res) => {
     const { ten_phong, khach, phong_ngu, giuong, phong_tam, mo_ta, gia_tien, may_giat, ban_la, ti_vi, dieu_hoa, wifi, bep, do_xe, ho_boi, ban_ui, ma_vi_tri } = req.body;
-    const dataUser = await User.findOne({ id: khach });
+    const dataUser = await User.findOne({ _id: khach });
     if (!dataUser) {
         failCode(res, "", "User is not axist!")
     }
@@ -19,7 +19,7 @@ const createRoom = async (req, res) => {
                 failCode(res, "", "Create room fail!")
             }
             else {
-                successCode(res, "", "Create room success !")
+                successCode(res, dataRoom, "Create room success !")
             }
         } catch (error) {
             errorCode(res, "Backend error")

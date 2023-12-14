@@ -4,7 +4,7 @@ const { successCode, failCode } = require('../../config/reponse');
 const getLocationById = async (req, res) => {
     const id = req.params.id;
     try {
-        const result = await Data.findOne({ id: id });
+        const result = await Data.findById(id);
         if (!result) {
             failCode(res, "", "Location does not exist !")
         }

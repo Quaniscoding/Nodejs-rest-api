@@ -4,11 +4,6 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const autoIncrementModelID = require('./counterModel');
 
 const BookRoomModel = new Schema({
-    id: {
-        type: Number,
-        unique: true,
-        min: 1
-    },
     ma_phong: {
         type: Number,
     },
@@ -22,7 +17,7 @@ const BookRoomModel = new Schema({
         type: Number,
     },
     ma_nguoi_dat: {
-        type: Number,
+        type: String,
     }
 }, {
     versionKey: false // Disable the "__v" field

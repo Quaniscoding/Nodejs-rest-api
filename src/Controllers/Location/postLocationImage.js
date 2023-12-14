@@ -26,8 +26,8 @@ const postLocationImage = async (req, res) => {
         let { hinh_anh } = req.body;
         hinh_anh = dataBase;
         const options = { new: true };
-        await DataImage.findOneAndUpdate(
-            { id: id }, {
+        await DataImage.findByIdAndUpdate(
+            id, {
             hinh_anh: {
                 data: hinh_anh,
                 contentType: req.file.mimetype

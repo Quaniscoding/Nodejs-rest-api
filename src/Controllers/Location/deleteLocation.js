@@ -3,7 +3,7 @@ const Data = require('../../Models/Location.model')
 const deleteLocation = async (req, res) => {
     const id = req.params.id;
     try {
-        const result = await Data.findOne({ id: id })
+        const result = await Data.findByIdAndDelete(id)
         if (!result) {
             failCode(res, "", 'Location does not exist.');
         }

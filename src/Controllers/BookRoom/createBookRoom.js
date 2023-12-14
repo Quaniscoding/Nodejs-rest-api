@@ -3,7 +3,7 @@ const BookRoom = require('../../Models/BookRoom.model');
 const Room = require('../../Models/Room.model')
 const createBookRoom = async (req, res) => {
     const { ma_phong, ngay_den, ngay_di, so_luong_khach, ma_nguoi_dat } = req.body;
-    const dataRoom = await Room.findOne({ id: ma_phong });
+    const dataRoom = await Room.findOne({ id: ma_phong }, { __v: 0 });
     if (!dataRoom) {
         failCode(res, "", "Room is not axist!")
     }
@@ -16,7 +16,7 @@ const createBookRoom = async (req, res) => {
                 failCode(res, "", "Create book room fail!")
             }
             else {
-                successCode(res, "", "Create book room success !")
+                successCode(res, dataRoom, "Create book room success !")
             }
         } catch (error) {
             errorCode(res, "Backend error")

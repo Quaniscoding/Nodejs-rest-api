@@ -5,7 +5,7 @@ const { successCode, failCode } = require('../../config/reponse');
 const getBookRoomByUserId = async (req, res) => {
     const id = req.params.id;
     try {
-        const checkUser = await User.findOne({ id: id })
+        const checkUser = await User.findOne({ _id: id })
         if (!checkUser) {
             failCode(res, "", "This user has not booked a room yet !")
         }

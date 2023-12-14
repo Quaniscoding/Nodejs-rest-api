@@ -4,7 +4,7 @@ const { successCode, failCode } = require('../../config/reponse');
 const getRoomById = async (req, res) => {
     const id = req.params.id;
     try {
-        const result = await Room.findOne({ id: id });
+        const result = await Room.findOne({ _id: id });
         if (!result) {
             failCode(res, "", "Room does not exist !")
         }

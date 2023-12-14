@@ -3,7 +3,7 @@ const { successCode, failCode } = require('../../config/reponse');
 
 const getComment = async (req, res) => {
     try {
-        const dataComment = await Comment.find({}, { __v: 0, _id: 0 });
+        const dataComment = await Comment.find({}, { __v: 0 });
         if (dataComment == "") {
             failCode(res, "", "List comment is emty !")
         }

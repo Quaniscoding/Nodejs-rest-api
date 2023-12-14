@@ -4,19 +4,14 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const autoIncrementModelID = require('./counterModel');
 
 const CommentSchema = new Schema({
-    id: {
-        type: Number,
-        unique: true,
-        min: 1
-    },
     ma_phong: {
-        type: Number
+        type: String
     },
     ma_cong_viec: {
         type: String,
     },
     ma_nguoi_binh_luan: {
-        type: Number
+        type: String
     },
     ngay_binh_luan: {
         type: String,

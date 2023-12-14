@@ -3,7 +3,7 @@ const { successCode, failCode } = require('../../config/reponse');
 
 const getLocation = async (req, res) => {
     try {
-        const result = await Data.find({}, { _id: 0, __v: 0 });
+        const result = await Data.find({}, { __v: 0 });
         if (result == "") {
             failCode(res, "", "List location is emty !")
         }
