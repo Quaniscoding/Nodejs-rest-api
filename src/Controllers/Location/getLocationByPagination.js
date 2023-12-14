@@ -20,7 +20,7 @@ const getLocationByPagination = async (req, res) => {
             skip = (Number(pageIndex) - 1) * Number(pageSize);
         }
 
-        const result = await Location.find(query, { _id: 0 })
+        const result = await Location.find(query)
             .skip(skip)
             .limit(Number(pageSize));
 

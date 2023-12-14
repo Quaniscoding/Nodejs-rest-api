@@ -15,7 +15,7 @@ const getRoomByPagination = async (req, res) => {
         if (pageIndex) {
             skip = (Number(pageIndex) - 1) * Number(pageSize);
         }
-        const result = await Room.find(query, { _id: 0 })
+        const result = await Room.find(query)
             .skip(skip)
             .limit(Number(pageSize));
         if (result.length === 0) {
