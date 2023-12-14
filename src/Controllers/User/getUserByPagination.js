@@ -8,16 +8,14 @@ const getUserByPagination = async (req, res) => {
             return;
         }
         let query = {};
-
         if (keyWord) {
             query.username = keyWord;
         }
         let skip = 0;
-
         if (pageIndex) {
             skip = (Number(pageIndex) - 1) * Number(pageSize);
         }
-        const result = await User.find(query, { _id: 0 })
+        const result = await User.find(query)
             .skip(skip)
             .limit(Number(pageSize));
         if (result.length === 0) {
@@ -31,7 +29,6 @@ const getUserByPagination = async (req, res) => {
             }, "Get User success!");
         }
     } catch (error) {
-        console.error(error);
         errorCode(res, "Backend error!");
     }
 };
