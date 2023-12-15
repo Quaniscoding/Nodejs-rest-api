@@ -16,7 +16,7 @@ const signIn = async (req, res) => {
                     "gender": result.gender,
                     "role": result.role,
                     "id": result._id,
-                    "avatar": result.avatar
+                    // "avatar": result.avatar
                 }, "Login success!")
             }
             else {
@@ -28,6 +28,7 @@ const signIn = async (req, res) => {
         }
     }
     catch (error) {
+        console.log(error);
         failCode(res, "Backend error !")
     }
 }

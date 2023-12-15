@@ -1,5 +1,5 @@
 // 200 , 400 , 500
-const { parseToken } = require('../middlewares/baseToken')
+const { generateToken } = require('../middlewares/baseToken')
 const date = new Date();
 const successCode = (res, data, message) => {
     res.status(200).json({
@@ -14,7 +14,7 @@ const successCodeLogin = (res, data, message) => {
         "statusCode": 200,
         message,
         content: data,
-        "Token": parseToken(data),
+        "Token": generateToken(data),
         DateTime: date
 
     });
