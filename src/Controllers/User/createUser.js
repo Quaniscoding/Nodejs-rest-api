@@ -10,7 +10,7 @@ const createUser = async (req, res) => {
             failCode(res, "", "Email is exist !")
         }
         else {
-            const data = await User.create({
+            await User.create({
                 username: username,
                 email: email,
                 pass_word: passWordHash,
