@@ -9,14 +9,13 @@ const signIn = async (req, res) => {
             const checkPass = bcrypt.compareSync(pass_word, result.pass_word);
             if (checkPass) {
                 successCodeLogin(res, {
+                    "id": result._id,
                     "username": result.username,
                     "email": result.email,
                     "phone": result.phone,
                     "birth_day": result.birth_day,
                     "gender": result.gender,
                     "role": result.role,
-                    "id": result._id,
-                    "avatar": result.avatar
                 }, "Login success!")
             }
             else {
