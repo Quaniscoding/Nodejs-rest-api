@@ -9,10 +9,22 @@ const getUserByPagination = async (req, res) => {
             return;
         }
 
+        // ...
+
         let query = {};
         if (keyWord) {
-            query.username = keyWord;
+            // Use a regular expression for a case-insensitive search on multiple fields
+            query = {
+                $or: [
+                    { username: { $regex: keyWord, $options: 'i' } },
+                    { email: { $regex: keyWord, $options: 'i' } },
+                    // Add more fields as needed
+                ]
+            };
         }
+
+        // ...
+
 
         // Count total number of users
         const totalUsers = await User.countDocuments(query);
