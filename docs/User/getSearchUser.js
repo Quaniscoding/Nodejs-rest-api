@@ -13,7 +13,6 @@ module.exports = {
                 {
                     "name": "keyWord",
                     "in": "query",
-                    "required": true,
                     "type": "string"
                 }, {
                     "name": "token",
