@@ -38,7 +38,6 @@ const createUser = async (req, res) => {
             }, "Create account success !");
         }
     } catch (error) {
-        console.log(res);
         errorCode(res, "Backend error")
     }
 }
