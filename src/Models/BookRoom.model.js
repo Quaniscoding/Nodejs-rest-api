@@ -8,10 +8,10 @@ const BookRoomModel = new Schema({
         type: Number,
     },
     ngay_den: {
-        type: String
+        type: Date
     },
     ngay_di: {
-        type: String
+        type: Date
     },
     so_luong_khach: {
         type: Number,
