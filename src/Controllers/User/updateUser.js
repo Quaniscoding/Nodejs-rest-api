@@ -5,8 +5,8 @@ const updateUser = async (req, res) => {
     try {
         const id = req.params.id;
         const options = { new: true };
-        const { username, email, phone, birthday, gender, role, birth_day, pass_word } = req.body;
-        const update = await User.findByIdAndUpdate(id, { username, email, phone, birthday, gender, role, birth_day, pass_word }, options)
+        const { username, email, phone, birthday, gender, role, birth_day } = req.body;
+        const update = await User.findByIdAndUpdate(id, { username, email, phone, birthday, gender, role, birth_day }, options)
         if (!update) {
             failCode(res, "", "User does not exist !");
             return;
@@ -14,7 +14,6 @@ const updateUser = async (req, res) => {
         else {
             successCode(res, {
                 "username": username,
-                "pass_word": pass_word,
                 "email": email,
                 "phone": phone,
                 "birth_day": birth_day,
